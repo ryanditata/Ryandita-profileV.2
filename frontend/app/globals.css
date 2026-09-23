@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography Settings */
+  --font-sans: var(--font-pp-mori), Helvetica, sans-serif;
+  --font-mori: var(--font-pp-mori), Helvetica, sans-serif;
+
+  /* Core Design System Color Palette */
+  --color-bg-brand: #ffffff;
+  --color-text-primary: #171717;
+  --color-text-secondary: #494949;
+  --color-border-brand: #cfcfcf;
+  --color-card-bg: #f4f4f4;
+  --color-dark-brand: #171717;
+  --color-white-brand: #ffffff;
+
+  /* Editorial Font Sizes using responsive clamp() */
+  --text-hero: clamp(40px, 8vw, 120px);
+  --text-section-title: clamp(36px, 4vw, 52px);
+  --text-card-title: clamp(22px, 2.5vw, 24px);
+  --text-body: clamp(14px, 1.2vw, 16px);
+  --text-caption: 12px;
+
+  /* Border Radii Rules */
+  --radius-card: 8px;
+  --radius-image: 8px;
+  --radius-button: 999px;
+
+  /* Custom Apple/Framer Transition */
+  --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base resets & styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-brand);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom layout container helper */
+.container-custom {
+  padding-inline: 54px;
+}
+
+@media (max-width: 1024px) {
+  .container-custom {
+    padding-inline: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-custom {
+    padding-inline: 24px;
+  }
+}
+
+/* Section vertical spacing helper */
+.section-padding {
+  padding-block: 140px;
+}
+
+@media (max-width: 1024px) {
+  .section-padding {
+    padding-block: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-block: 80px;
+  }
+}
+
+/* Micro-interaction & hover effects */
+.hover-scale {
+  transition: var(--transition-smooth);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.hover-lift {
+  transition: var(--transition-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.btn-transition {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-transition:hover {
+  transform: scale(1.02);
+}
