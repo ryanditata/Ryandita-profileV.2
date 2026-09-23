@@ -67,7 +67,7 @@ Buka [http://localhost:3000](http://localhost:3000) di browser untuk melihat web
 Untuk menghubungkan Frontend dengan Sanity CMS, buat file `.env.local` di dalam folder `/frontend` (atau atur pada penyedia layanan hosting Anda):
 
 ```env
-NEXT_PUBLIC_SANITY_PROJECT_ID="n76horb8"
+NEXT_PUBLIC_SANITY_PROJECT_ID=""
 NEXT_PUBLIC_SANITY_DATASET="production"
 ```
 

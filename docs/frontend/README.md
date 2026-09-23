@@ -46,7 +46,7 @@ frontend/
 Untuk menghubungkan Frontend dengan database Sanity di cloud, Next.js membutuhkan file `.env.local` di root folder `/frontend` dengan isi sebagai berikut:
 
 ```env
-NEXT_PUBLIC_SANITY_PROJECT_ID="n76horb8"
+NEXT_PUBLIC_SANITY_PROJECT_ID=""
 NEXT_PUBLIC_SANITY_DATASET="production"
 NEXT_PUBLIC_SANITY_API_VERSION="2026-05-22"
 ```
@@ -172,7 +172,7 @@ Frontend Next.js dapat dideploy dengan mudah ke platform Vercel menggunakan inte
 1. Buat project baru di Vercel Dashboard dan hubungkan dengan repositori GitHub Anda.
 2. Pada langkah konfigurasi proyek, masuk ke bagian **Environment Variables**.
 3. Daftarkan tiga variabel berikut beserta nilainya:
-   - `NEXT_PUBLIC_SANITY_PROJECT_ID` = `n76horb8`
+   - `NEXT_PUBLIC_SANITY_PROJECT_ID` = ``
    - `NEXT_PUBLIC_SANITY_DATASET` = `production`
    - `NEXT_PUBLIC_SANITY_API_VERSION` = `2026-05-22`
 4. Klik **Deploy**.
