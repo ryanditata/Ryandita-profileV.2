@@ -23,14 +23,14 @@ export default function Footer() {
       <Container>
         {/* Top Section — Headline & CTA */}
         <div className="flex flex-row items-start justify-between gap-8 mb-16">
-          <h2 className="text-[40px] md:text-[64px] font-mori font-medium tracking-tight text-white-brand leading-[1.1]">
+          <h2 className="text-[40px] md:text-[52px] lg:text-[64px] font-mori font-medium tracking-tight text-white-brand leading-[1.1]">
             Let's Connect <br /> There
           </h2>
-          <div>
+          <div className="flex-shrink-0">
             <Button
               variant="secondary"
               as="a"
-              className="rounded-full font-mori font-medium text-[14px]"
+              className="px-4 py-2 md:px-8 md:py-3.5 whitespace-nowrap rounded-full font-mori font-medium text-[13px] md:text-[14px]"
               href="https://wa.me/62895361206884"
               target="_blank"
               rel="noopener noreferrer"
@@ -44,9 +44,9 @@ export default function Footer() {
         <div className="w-full h-[1px] bg-white-brand/10 mb-12" />
 
         {/* Middle Section — Grid Content */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-stretch mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-8 lg:gap-8 items-stretch mb-16">
           {/* Brand & Bio column (Left) */}
-          <div className="lg:col-span-7 flex flex-col justify-between min-h-[160px]">
+          <div className="md:col-span-1 lg:col-span-7 flex flex-col justify-between min-h-[160px]">
             <div>
               <h3 className="text-[20px] font-mori font-bold text-white-brand mb-3 select-none">
                 Ryandita.
@@ -107,27 +107,27 @@ export default function Footer() {
           </div>
 
           {/* Contact Details & Nav Links (Right) */}
-          <div className="lg:col-span-5 flex flex-col items-end justify-between min-h-[160px]">
+          <div className="md:col-span-1 lg:col-span-5 flex flex-col items-end justify-between min-h-[160px]">
             {/* Contacts Grid */}
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 md:gap-4 lg:gap-8 w-full md:w-auto">
               <div>
-                <span className="text-[16px] font-mori font-medium text-white-brand block mb-1">
+                <span className="text-[16px] md:text-[15px] lg:text-[16px] font-mori font-medium text-white-brand block mb-1">
                   Email Address
                 </span>
                 <a
                   href="mailto:ryanditata38@gmail.com"
-                  className="text-[14px] text-white-brand/60 hover:text-white-brand transition-colors duration-300 font-mori"
+                  className="text-[14px] md:text-[13px] lg:text-[14px] text-white-brand/60 hover:text-white-brand transition-colors duration-300 font-mori"
                 >
                   ryanditata38@gmail.com
                 </a>
               </div>
               <div>
-                <span className="text-[16px] font-mori font-medium text-white-brand block mb-1">
+                <span className="text-[16px] md:text-[15px] lg:text-[16px] font-mori font-medium text-white-brand block mb-1">
                   Phone Number
                 </span>
                 <a
                   href="tel:+62895361206884"
-                  className="text-[14px] text-white-brand/60 hover:text-white-brand transition-colors duration-300 font-mori"
+                  className="text-[14px] md:text-[13px] lg:text-[14px] text-white-brand/60 hover:text-white-brand transition-colors duration-300 font-mori"
                 >
                   +62 895 3612 06884
                 </a>
@@ -135,7 +135,7 @@ export default function Footer() {
             </div>
 
             {/* Menu Links */}
-            <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 lg:justify-end text-[14px] text-white-brand/60 font-mori mt-8 lg:mt-0">
+            <nav className="flex flex-wrap items-center gap-x-6 md:gap-x-4 lg:gap-x-6 gap-y-2 md:justify-end lg:justify-end text-[14px] md:text-[13px] lg:text-[14px] text-white-brand/60 font-mori mt-8 lg:mt-0">
               {navLinks.map((link, idx) => (
                 <a
                   key={idx}

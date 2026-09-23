@@ -52,7 +52,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex items-center md:gap-3.5 lg:gap-6 xl:gap-10">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/portfolio" ? pathname === "/portfolio" : false;
@@ -62,7 +62,7 @@ export default function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className={`text-body font-medium transition-colors duration-300 relative group ${
+                className={`text-body font-medium transition-colors duration-300 relative group md:text-sm lg:text-body whitespace-nowrap ${
                   isActive
                     ? "text-text-primary"
                     : "text-text-secondary hover:text-text-primary"
