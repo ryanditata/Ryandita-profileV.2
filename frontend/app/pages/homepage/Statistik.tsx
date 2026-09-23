@@ -94,7 +94,7 @@ export default function Stats({ projectCount = 0 }: { projectCount?: number }) {
           </div>
           <div className="lg:col-span-4">
             <p className="text-sm md:text-body text-text-secondary leading-relaxed lg:text-right">
-              I believe great software happens when logic meets real-world impact. By combining fullstack development with AI/ML engineering, I build digital products that are scalable, intelligent, and user-centered.
+              I believe great software happens when logic meets real-world impact. By combining fullstack development with AI/ML engineer, I build digital products that are scalable, intelligent, and user-centered.
             </p>
           </div>
         </motion.div>

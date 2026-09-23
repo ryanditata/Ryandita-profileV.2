@@ -19,7 +19,7 @@ export default function Services() {
         "Building end-to-end web applications from database to user interface.",
     },
     {
-      title: "AI/ML Engineering",
+      title: "AI/ML Engineer",
       description:
         "Developing machine learning models and integrating AI into real products.",
     },
@@ -69,7 +69,7 @@ export default function Services() {
               Crafting digital solutions through code and intelligence.
             </h2>
             <p className="text-[15px] lg:text-[16px] text-text-secondary leading-relaxed font-mori font-normal max-w-md">
-              I believe great engineering happens when logic meets real-world impact. By combining fullstack development with AI/ML engineering, I build digital products that are scalable, efficient, and impactful.
+              I believe great engineering happens when logic meets real-world impact. By combining fullstack development with AI/ML engineer, I build digital products that are scalable, efficient, and impactful.
             </p>
           </motion.div>
 
@@ -78,7 +78,7 @@ export default function Services() {
             variants={itemVariants}
             className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
           >
-            {/* Sub-column 1: UI/UX & Graphic Design */}
+            {/* Sub-column 1 */}
             <div className="flex flex-col gap-6">
               <CardService
                 title={servicesData[0].title}
@@ -96,7 +96,7 @@ export default function Services() {
               />
             </div>
 
-            {/* Sub-column 2: Frontend Development */}
+            {/* Sub-column 2 */}
             <div className="flex flex-col gap-6">
               <CardService
                 title={servicesData[2].title}

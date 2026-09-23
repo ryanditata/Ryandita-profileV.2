@@ -24,7 +24,7 @@ export default function CardService({
     <div
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      className={`group p-8 md:p-10 rounded-[24px] flex flex-col justify-between relative overflow-hidden transition-all duration-500 cursor-pointer border border-dark-brand/5 shadow-xs select-none ${
+      className={`group p-6 sm:p-7 lg:p-8 rounded-[24px] flex flex-col justify-between relative overflow-hidden transition-all duration-500 cursor-pointer border border-dark-brand/5 shadow-xs select-none ${
         isActive
           ? "bg-dark-brand text-white-brand"
           : "bg-[#f5f5f5] text-dark-brand"
@@ -44,14 +44,14 @@ export default function CardService({
       {/* Content */}
       <div>
         <h3
-          className={`text-2xl md:text-5xl font-mori font-medium tracking-tight mb-3 transition-colors duration-500 ${
+          className={`text-4xl sm:text-5xl lg:text-[40px] xl:text-[44px] 2xl:text-[48px] leading-[1.08] font-mori font-medium tracking-tight mb-3 transition-colors duration-500 break-words ${
             isActive ? "text-white-brand" : "text-dark-brand"
           }`}
         >
           {title}
         </h3>
         <p
-          className={`text-lg leading-relaxed font-mori font-normal max-w-[280px] transition-colors duration-500 ${
+          className={`text-base md:text-[16px] lg:text-[17px] leading-relaxed font-mori font-normal max-w-[300px] transition-colors duration-500 ${
             isActive ? "text-white-brand/70" : "text-dark-brand/70"
           }`}
         >
