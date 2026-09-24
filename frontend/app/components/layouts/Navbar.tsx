@@ -7,6 +7,12 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
+interface NavLink {
+  name: string;
+  href: string;
+  external?: boolean;
+}
+
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -27,20 +33,19 @@ export default function Navbar() {
   const pathname = usePathname();
   const isHomepage = pathname === "/";
 
-  const navLinks = [
+  const navLinks: NavLink[] = [
     { name: "Personal", href: isHomepage ? "#personal" : "/#personal" },
-    { name: "About Us", href: isHomepage ? "#about" : "/#about" },
+    { name: "About Me", href: isHomepage ? "#about" : "/#about" },
     { name: "Services", href: isHomepage ? "#services" : "/#services" },
     { name: "Experience", href: isHomepage ? "#experience" : "/#experience" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "Certificate", href: "https://drive.google.com/drive/folders/1sjV2fh0T2FdIVkg_R6__dipTwwPkNDUw?usp=sharing", external: true },
+    { name: "Certificate", href: "/certificate" },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 h-20 flex items-center ${
-        isScrolled ? "bg-bg-brand/85 backdrop-blur-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 h-20 flex items-center ${isScrolled ? "bg-bg-brand/85 backdrop-blur-md" : "bg-transparent"
+        }`}
     >
       <Container className="flex items-center justify-between">
         {/* Logo */}
@@ -55,24 +60,26 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center md:gap-3.5 lg:gap-6 xl:gap-10">
           {navLinks.map((link) => {
             const isActive =
-              link.href === "/portfolio" ? pathname === "/portfolio" : false;
+              link.href === "/portfolio"
+                ? pathname === "/portfolio"
+                : link.href === "/certificate"
+                  ? pathname === "/certificate"
+                  : false;
             return (
               <a
                 key={link.name}
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className={`text-body font-medium transition-colors duration-300 relative group md:text-sm lg:text-body whitespace-nowrap ${
-                  isActive
+                className={`text-body font-medium transition-colors duration-300 relative group md:text-sm lg:text-body whitespace-nowrap ${isActive
                     ? "text-text-primary"
                     : "text-text-secondary hover:text-text-primary"
-                }`}
+                  }`}
               >
                 {link.name}
                 <span
-                  className={`absolute bottom-[-4px] left-0 h-[1.5px] bg-text-primary transition-all duration-300 ${
-                    isActive ? "w-full" : "w-0 group-hover:w-full"
-                  }`}
+                  className={`absolute bottom-[-4px] left-0 h-[1.5px] bg-text-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
                 />
               </a>
             );
@@ -118,7 +125,9 @@ export default function Navbar() {
                 const isActive =
                   link.href === "/portfolio"
                     ? pathname === "/portfolio"
-                    : false;
+                    : link.href === "/certificate"
+                      ? pathname === "/certificate"
+                      : false;
                 return (
                   <a
                     key={link.name}
@@ -126,11 +135,10 @@ export default function Navbar() {
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-card-title font-medium transition-colors duration-300 ${
-                      isActive
+                    className={`text-card-title font-medium transition-colors duration-300 ${isActive
                         ? "text-text-primary font-bold"
                         : "text-text-secondary hover:text-text-primary"
-                    }`}
+                      }`}
                   >
                     {link.name}
                   </a>

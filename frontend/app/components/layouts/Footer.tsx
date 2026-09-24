@@ -12,10 +12,11 @@ export default function Footer() {
 
   const navLinks = [
     { name: "Personal", href: isHomepage ? "#personal" : "/#personal" },
-    { name: "About Us", href: isHomepage ? "#about" : "/#about" },
+    { name: "About Me", href: isHomepage ? "#about" : "/#about" },
     { name: "Services", href: isHomepage ? "#services" : "/#services" },
     { name: "Experience", href: isHomepage ? "#experience" : "/#experience" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "Certificate", href: "/certificate" },
   ];
 
   return (
@@ -46,7 +47,7 @@ export default function Footer() {
         {/* Middle Section — Grid Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 md:gap-8 lg:gap-8 items-stretch mb-16">
           {/* Brand & Bio column (Left) */}
-          <div className="md:col-span-1 lg:col-span-7 flex flex-col justify-between min-h-[160px]">
+          <div className="md:col-span-1 lg:col-span-5 flex flex-col justify-between min-h-[160px]">
             <div>
               <h3 className="text-[20px] font-mori font-bold text-white-brand mb-3 select-none">
                 Ryandita.
@@ -107,7 +108,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Details & Nav Links (Right) */}
-          <div className="md:col-span-1 lg:col-span-5 flex flex-col items-end justify-between min-h-[160px]">
+          <div className="md:col-span-1 lg:col-span-7 flex flex-col items-end justify-between min-h-[160px]">
             {/* Contacts Grid */}
             <div className="grid grid-cols-2 gap-8 md:gap-4 lg:gap-8 w-full md:w-auto">
               <div>
@@ -135,12 +136,12 @@ export default function Footer() {
             </div>
 
             {/* Menu Links */}
-            <nav className="flex flex-wrap items-center gap-x-6 md:gap-x-4 lg:gap-x-6 gap-y-2 md:justify-end lg:justify-end text-[14px] md:text-[13px] lg:text-[14px] text-white-brand/60 font-mori mt-8 lg:mt-0">
+            <nav className="flex flex-wrap lg:flex-nowrap items-center gap-x-6 md:gap-x-4 lg:gap-x-4 xl:gap-x-6 gap-y-2 md:justify-end lg:justify-end text-[14px] md:text-[13px] lg:text-[14px] text-white-brand/60 font-mori mt-8 lg:mt-0">
               {navLinks.map((link, idx) => (
                 <a
                   key={idx}
                   href={link.href}
-                  className="hover:text-white-brand transition-colors duration-300"
+                  className="hover:text-white-brand transition-colors duration-300 whitespace-nowrap"
                 >
                   {link.name}
                 </a>

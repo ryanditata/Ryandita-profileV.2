@@ -19,7 +19,7 @@ const ppMori = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Ryandita — Portfolio",
+  title: "Ryandita - Portfolio",
   description:
     "Personal Portfolio of Ryandita, Fullstack Developer & AI/ML Engineer",
 };
