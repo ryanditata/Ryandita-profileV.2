@@ -172,15 +172,15 @@ export default function CertificateClient({ certificates = [] }: CertificateClie
 
                 {/* Metadata Row */}
                 <div className="flex items-start justify-between w-full font-mori">
-                  <span className="text-sm text-text-secondary select-none font-mono">
+                  <span className="text-sm text-text-secondary select-none">
                     [{globalIndex.toString().padStart(2, "0")}]
                   </span>
-                  <div className="flex flex-col flex-1 px-4">
-                    <h4 className="text-body font-semibold text-text-primary leading-snug mb-1 group-hover:text-text-secondary transition-colors duration-300">
+                  <div className="flex flex-col">
+                    <h4 className="text-body font-semibold text-text-primary leading-none mb-1 group-hover:text-text-secondary transition-colors duration-300">
                       {cert.title}
                     </h4>
                     <span className="text-sm text-text-secondary">
-                      {cert.issuer || cert.category || "Certified Credential"}
+                      {cert.category || cert.issuer || "Certificate"}
                     </span>
                   </div>
                   <span className="text-sm text-text-secondary">
